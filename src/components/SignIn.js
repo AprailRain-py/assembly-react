@@ -9,7 +9,7 @@ export default function SignIn() {
   const startAuth = () => {
     setLoading(true);
     axios
-      .get("/start-auth")
+      .get("https://assembly-poc-ai.herokuapp.com/start-auth")
       .then((res) => {
         if (res.data.redirectUrl) {
           localStorage.setItem(
