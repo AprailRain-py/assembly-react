@@ -12,7 +12,7 @@ export default function SignIn(props) {
       // makes call to callback endpoint(on our server) with the needed params
       axios
         .get(
-          `/callback/${localStorage.getItem(
+          `https://assembly-poc-ai.herokuapp.com/callback/${localStorage.getItem(
             "oauthRequestToken"
           )}/${localStorage.getItem("oauthRequestTokenSecret")}/${
             query.oauth_verifier
@@ -24,7 +24,7 @@ export default function SignIn(props) {
             //   if returned, check to verify
             axios
               .get(
-                `/verify/${response.data.oauthAccessToken}/${response.data.oauthAccessTokenSecret}`
+                `https://assembly-poc-ai.herokuapp.com/verify/${response.data.oauthAccessToken}/${response.data.oauthAccessTokenSecret}`
               )
               .then((res) => {
                 const { user, homeTimeLine } = res.data;
