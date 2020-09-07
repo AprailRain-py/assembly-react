@@ -8,19 +8,11 @@ import Home from "./components/Home";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/https://practical-hoover-59ac07.netlify.app/">
       <Switch>
         <Route exact path="/" component={SignIn} />
-        <Route
-          exact
-          path="https://practical-hoover-59ac07.netlify.app/auth/twitter/callback/auth/twitter/callback"
-          component={AuthPage}
-        />
-        <Route
-          exact
-          path="https://practical-hoover-59ac07.netlify.app/home"
-          component={Home}
-        />
+        <Route exact path="/callback" component={AuthPage} />
+        <Route exact path="/home" component={Home} />
       </Switch>
     </Router>
   );
