@@ -11,8 +11,16 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={SignIn} />
-        <Route exact path="/auth/twitter/callback" component={AuthPage} />
-        <Route exact path="/home" component={Home} />
+        <Route
+          exact
+          path="https://practical-hoover-59ac07.netlify.app/auth/twitter/callback/auth/twitter/callback"
+          component={AuthPage}
+        />
+        <Route
+          exact
+          path="https://practical-hoover-59ac07.netlify.app/home"
+          component={Home}
+        />
       </Switch>
     </Router>
   );
