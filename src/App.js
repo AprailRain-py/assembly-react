@@ -8,7 +8,7 @@ import Home from "./components/Home";
 
 function App() {
   return (
-    <Router basename="/https://practical-hoover-59ac07.netlify.app">
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/" component={SignIn} />
         <Route exact path="/callback" component={AuthPage} />
