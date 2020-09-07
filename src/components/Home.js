@@ -22,13 +22,20 @@ export default function Home(props) {
 
   return (
     <div className="container-fluid">
-      <div className="text-center">
-        <p>{user.accessToken}</p>
-        <p>{user.secret}</p>
-        <img className="img-thumbnail" alt={user.name} src={user.photo} />
-        <h1>Welcome {user.userName}!</h1>
-        {/* <p>{user.homeTimeLine}</p> */}
-        <button onClick={logout}> Logout </button>
+      <div className="row">
+        <div className="col-lg-6">
+          <div>
+            <h1>Welcome {user.userName}!</h1>
+            <img className="img-thumbnail" alt={user.name} src={user.photo} />
+            {/* <p>{user.homeTimeLine}</p> */}
+          </div>
+        </div>
+        <div className="col-lg-6">
+          <button className="mb-4" onClick={logout}>
+            {" "}
+            Logout{" "}
+          </button>
+        </div>
       </div>
 
       {props.location.state.user.tweet.tweets.map((data) => {
