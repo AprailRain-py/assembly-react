@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 
 import SignIn from "./components/SignIn";
@@ -8,7 +8,7 @@ import Home from "./components/Home";
 
 function App() {
   return (
-    <Router>
+    <Router history={hashHistory}>
       <Switch>
         <Route exact path="/" component={SignIn} />
         <Route exact path="/callback" component={AuthPage} />
