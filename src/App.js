@@ -8,10 +8,10 @@ import Home from "./components/Home";
 
 function App() {
   return (
-    <Router history={hashHistory}>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/" component={SignIn} />
-        <Route exact path="/callback" component={AuthPage} />
+        <Route exact path="/auth/twitter/callback" component={AuthPage} />
         <Route exact path="/home" component={Home} />
       </Switch>
     </Router>
