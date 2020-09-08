@@ -27,7 +27,13 @@ export default function SignIn(props) {
                 `https://assembly-poc-ai.herokuapp.com/verify/${response.data.oauthAccessToken}/${response.data.oauthAccessTokenSecret}`
               )
               .then((res) => {
-                const { user, homeTimeLine } = res.data;
+                const {
+                  user,
+                  homeTimeLine,
+                  tweetHasLink,
+                  userWithMostURL,
+                  domainWithURL,
+                } = res.data;
                 const keys = response.data;
 
                 const userInfo = {
@@ -35,6 +41,9 @@ export default function SignIn(props) {
                   secret: keys.oauthAccessTokenSecret,
                   user_id: user.id_str,
                   tweet: homeTimeLine,
+                  tweetHasLink: tweetHasLink,
+                  userWithMostURL: userWithMostURL,
+                  domainWithURL: domainWithURL,
                   screen_name: user.screen_name,
                   photo: user.profile_image_url_https.replace("_normal", ""),
                 };

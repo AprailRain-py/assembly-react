@@ -38,6 +38,24 @@ export default function Home(props) {
         </div>
       </div>
 
+      <p>Number of Tweets with URLs : {props.location.state.user}</p>
+
+      {props.location.state.user.userWithMostURL.map((u, i) => {
+        <div key={i}>
+          <p>
+            {u.name} has shared {u.count} urls
+          </p>
+        </div>;
+      })}
+
+      {props.location.state.user.domainWithURL.map((d, i) => {
+        <div key={i}>
+          <p>
+            {d.domain} has being shared {u.count} times
+          </p>
+        </div>;
+      })}
+
       {props.location.state.user.tweet.tweets.map((data) => {
         return (
           <div key={data._id} className="row">
