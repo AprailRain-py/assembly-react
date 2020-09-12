@@ -1,9 +1,15 @@
 import React from "react";
 
 const tweetCard = (props) => {
-  props.totalUser.map((u, i) => {
+  let loop;
+  if (props.totalUser == null) {
+    loop = [{ name: "yogesh", count: 2 }];
+  } else {
+    loop = props.totalUser;
+  }
+  return loop.map((u, i) => {
     return (
-      <div className="col-xl-3 col-md-6 mb-4">
+      <div key={i} className="col-xl-3 col-md-6 mb-4">
         <div className="card border-left-primary shadow h-100 py-2">
           <div className="card-body">
             <div className="row no-gutters align-items-center">

@@ -21,19 +21,23 @@ export default function Home(props) {
     alert("user logged out");
     props.history.push("/");
   };
-
+  console.log(props.location.state);
   return (
     <div className="container-fluid">
       <Navigation
-        userName={user.userName}
-        imgSrc={user.photo}
-        altText={user.name}
+        userName={props.location.state == null ? "" : user.userName}
+        imgSrc={props.location.state == null ? "" : user.photo}
+        altText={props.location.state == null ? "" : user.name}
         logoutControl={logout}
       ></Navigation>
       <UserCard
-        userName={user.userName}
-        urlTweets={props.location.state.user.tweetHasLink}
-        usersWithUrl={props.location.state.user.userWithMostURL}
+        userName={props.location.state == null ? "" : ""}
+        urlTweets={props.location.state == null ? null : ""}
+        // props.location.state.user.tweetHasLink
+        usersWithUrl={
+          props.location.state == null ? null : ""
+          // props.location.state.user.userWithMostURL
+        }
       ></UserCard>
 
       {/* {props.location.state.user.userWithMostURL.map((u, i) => {
@@ -46,7 +50,7 @@ export default function Home(props) {
         );
       })} */}
 
-      {props.location.state.user.domainWithURL.map((d, i) => {
+      {/* {props.location.state.user.domainWithURL.map((d, i) => {
         return (
           <div key={i}>
             <p>
@@ -77,7 +81,7 @@ export default function Home(props) {
             </div>
           </div>
         );
-      })}
+      })} */}
     </div>
   );
 }
