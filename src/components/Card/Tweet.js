@@ -8,7 +8,7 @@ const tweetCard = (props) => {
     loop = props.totalUser;
   }
   console.log(loop);
-  return loop.map((u, i) => {
+  return props.totalUser.map((u, i) => {
     return (
       <div key={i} className="col-xl-3 col-md-6 mb-4">
         <div className="card border-left-primary shadow h-100 py-2">
