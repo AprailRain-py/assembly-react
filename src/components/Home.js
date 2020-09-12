@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 
+import Navigation from "../components/Navigation/Navigation";
+import UserCard from "../components/Card/UserCard";
+
 export default function Home(props) {
   const [user, setUser] = useState({});
   useEffect(() => {
@@ -18,31 +21,22 @@ export default function Home(props) {
     alert("user logged out");
     props.history.push("/");
   };
-  console.log("Set user from state", props.location.state.user.tweet.tweets);
 
   return (
     <div className="container-fluid">
-      <div className="row">
-        <div className="col-lg-6">
-          <div>
-            <h1>Welcome {user.userName}!</h1>
-            <img className="img-thumbnail" alt={user.name} src={user.photo} />
-            {/* <p>{user.homeTimeLine}</p> */}
-          </div>
-        </div>
-        <div className="col-lg-6">
-          <button className="mb-4" onClick={logout}>
-            {" "}
-            Logout{" "}
-          </button>
-        </div>
-      </div>
+      <Navigation
+        userName={user.userName}
+        imgSrc={user.photo}
+        altText={user.name}
+        logoutControl={logout}
+      ></Navigation>
+      <UserCard
+        userName={user.userName}
+        urlTweets={props.location.state.user.tweetHasLink}
+        usersWithUrl={props.location.state.user.userWithMostURL}
+      ></UserCard>
 
-      <p>
-        Number of Tweets with URLs : {props.location.state.user.tweetHasLink}
-      </p>
-
-      {props.location.state.user.userWithMostURL.map((u, i) => {
+      {/* {props.location.state.user.userWithMostURL.map((u, i) => {
         return (
           <div key={i}>
             <p>
@@ -50,7 +44,7 @@ export default function Home(props) {
             </p>
           </div>
         );
-      })}
+      })} */}
 
       {props.location.state.user.domainWithURL.map((d, i) => {
         return (
