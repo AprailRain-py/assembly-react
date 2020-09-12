@@ -25,7 +25,7 @@ export default function Home(props) {
   return (
     <div className="container-fluid">
       <Navigation
-        userName={props.location.state == null ? "" : user.userName}
+        userName={props.location.state == null ? "" : user.screen_name}
         imgSrc={props.location.state == null ? "" : user.photo}
         altText={props.location.state == null ? "" : user.name}
         logoutControl={logout}

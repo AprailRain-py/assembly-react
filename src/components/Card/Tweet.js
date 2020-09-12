@@ -1,16 +1,9 @@
 import React from "react";
 
 const tweetCard = (props) => {
-  let loop;
-  if (props.totalUser == null) {
-    loop = [{ name: "yogesh", count: 2 }];
-  } else {
-    loop = props.totalUser;
-  }
-  console.log(loop);
   return props.totalUser.map((u, i) => {
     return (
-      <div key={i} className="col-xl-3 col-md-6 mb-4">
+      <div key={i} className="col-xl-2 col-md-3 mb-4">
         <div className="card border-left-primary shadow h-100 py-2">
           <div className="card-body">
             <div className="row no-gutters align-items-center">
@@ -21,9 +14,6 @@ const tweetCard = (props) => {
                 <div className="h5 mb-0 font-weight-bold text-gray-800">
                   {u.count}
                 </div>
-              </div>
-              <div className="col-auto">
-                <i className="fas fa-calendar fa-2x text-gray-300"></i>
               </div>
             </div>
           </div>
