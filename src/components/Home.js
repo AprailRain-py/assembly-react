@@ -32,11 +32,15 @@ export default function Home(props) {
       ></Navigation>
       <UserCard
         userName={props.location.state == null ? "" : ""}
-        urlTweets={props.location.state == null ? null : ""}
-        // props.location.state.user.tweetHasLink
+        urlTweets={
+          props.location.state == null
+            ? null
+            : props.location.state.user.tweetHasLink
+        }
         usersWithUrl={
-          props.location.state == null ? null : ""
-          // props.location.state.user.userWithMostURL
+          props.location.state == null
+            ? null
+            : props.location.state.user.userWithMostURL
         }
       ></UserCard>
 
