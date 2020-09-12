@@ -3,7 +3,7 @@ import React from "react";
 const domainCard = (props) => {
   return props.domainURL
     .filter((u) => u.count > 0)
-    .props.domainURL.map((u, i) => {
+    .map((u, i) => {
       return (
         <div key={i} class="col-lg-2 mb-4">
           <div class="card bg-secondary text-white shadow">
