@@ -12,6 +12,9 @@ const userCard = (props) => {
       <div className="row">
         <TweetCard totalUser={props.usersWithUrl}></TweetCard>
       </div>
+      <div className="row">
+        <TweetCard totalUser={props.domainURL}></TweetCard>
+      </div>
     </div>
   );
 };

@@ -42,6 +42,11 @@ export default function Home(props) {
             ? null
             : props.location.state.user.userWithMostURL
         }
+        domainURL={
+          props.location.state == null
+            ? null
+            : props.location.state.user.domainWithURL
+        }
       ></UserCard>
 
       {/* {props.location.state.user.userWithMostURL.map((u, i) => {
