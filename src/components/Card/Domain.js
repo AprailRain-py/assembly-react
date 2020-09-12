@@ -5,11 +5,11 @@ const domainCard = (props) => {
     .filter((u) => u.count > 0)
     .map((u, i) => {
       return (
-        <div key={i} class="col-lg-3 mb-4">
-          <div class="card bg-secondary text-white shadow">
-            <div class="card-body">
+        <div key={i} className="col-lg-6 mb-4">
+          <div className="card bg-secondary text-white shadow">
+            <div className="card-body">
               {u.count}
-              <div class="text-white-50 small">{u.domain}</div>
+              <div className="text-white-50 small">{u.domain}</div>
             </div>
           </div>
         </div>

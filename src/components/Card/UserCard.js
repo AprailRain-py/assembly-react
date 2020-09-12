@@ -12,10 +12,13 @@ const userCard = (props) => {
         <Heading totaltweets={props.urlTweets}></Heading>
       </div>
       <Container heading="User's Tweet with URL"></Container>
-      <TweetCard totalUser={props.usersWithUrl}></TweetCard>
-
+      <div class="row">
+        <TweetCard totalUser={props.usersWithUrl}></TweetCard>
+      </div>
       <Container heading="Domains shared"></Container>
-      <Domain domainURL={props.domainURL}></Domain>
+      <div class="row">
+        <Domain domainURL={props.domainURL}></Domain>
+      </div>
     </div>
   );
 };
