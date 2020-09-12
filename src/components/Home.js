@@ -31,7 +31,7 @@ export default function Home(props) {
         logoutControl={logout}
       ></Navigation>
       <UserCard
-        userName={props.location.state == null ? "" : ""}
+        userName={props.location.state == null ? "" : user.userName}
         urlTweets={
           props.location.state == null
             ? null
