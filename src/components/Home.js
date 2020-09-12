@@ -31,7 +31,7 @@ export default function Home(props) {
         logoutControl={logout}
       ></Navigation>
       <UserCard
-        userName={props.location.state == null ? "" : user.userName}
+        userName={props.location.state == null ? "" : user.screen_name}
         urlTweets={
           props.location.state == null
             ? null
@@ -49,25 +49,7 @@ export default function Home(props) {
         }
       ></UserCard>
 
-      {/* {props.location.state.user.userWithMostURL.map((u, i) => {
-        return (
-          <div key={i}>
-            <p>
-              {u.name} has shared {u.count} urls
-            </p>
-          </div>
-        );
-      })} */}
-
-      {/* {props.location.state.user.domainWithURL.map((d, i) => {
-        return (
-          <div key={i}>
-            <p>
-              {d.domain} has being shared {d.count} times
-            </p>
-          </div>
-        );
-      })}
+      {/* 
 
       {props.location.state.user.tweet.tweets.map((data) => {
         return (
