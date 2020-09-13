@@ -5,7 +5,7 @@ const domainCard = (props) => {
     .filter((u) => u.count > 0)
     .map((u, i) => {
       return (
-        <div key={i} className="col-lg-2 mb-4">
+        <div key={i} className="col-lg-3 mb-4">
           <div className="card bg-secondary text-white shadow">
             <div className="card-body">
               {u.count}

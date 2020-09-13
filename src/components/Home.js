@@ -21,7 +21,7 @@ export default function Home(props) {
     alert("user logged out");
     props.history.push("/");
   };
-  console.log(props.location.state);
+  // console.log(props.location.state);
   return (
     <div className="container-fluid">
       <Navigation
@@ -46,6 +46,11 @@ export default function Home(props) {
           props.location.state == null
             ? null
             : props.location.state.user.domainWithURL
+        }
+        tweets={
+          props.location.state == null
+            ? null
+            : props.location.state.user.tweet.tweets
         }
       ></UserCard>
 

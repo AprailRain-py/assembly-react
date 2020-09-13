@@ -25,13 +25,18 @@ const navigation = (props) => {
                   alt={props.altText}
                 ></img>
               </a>
-
+            </li>
+            <li>
               <div
                 className="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                 aria-labelledby="userDropdown"
               >
                 <i className="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                <button type="button" onClick={props.logoutControl}></button>
+                <button
+                  className="btn btn-circle"
+                  type="button"
+                  onClick={props.logoutControl}
+                ></button>
               </div>
             </li>
           </ul>

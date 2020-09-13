@@ -1,8 +1,9 @@
 import React from "react";
-import TweetCard from "./Tweet";
+import TweetCard from "./TweetsWithURL";
 import Heading from "./Heading";
 import Domain from "./Domain";
 import Container from "../HOC/wrapper";
+import Tweet from "./Tweets";
 
 const userCard = (props) => {
   return (
@@ -18,6 +19,9 @@ const userCard = (props) => {
       <Container heading="Domains shared"></Container>
       <div class="row">
         <Domain domainURL={props.domainURL}></Domain>
+      </div>
+      <div class="row">
+        <Tweet tweetsList={props.tweets}></Tweet>
       </div>
     </div>
   );
