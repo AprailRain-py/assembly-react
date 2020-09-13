@@ -36,7 +36,9 @@ const navigation = (props) => {
                   className="btn btn-circle"
                   type="button"
                   onClick={props.logoutControl}
-                ></button>
+                >
+                  Logout
+                </button>
               </div>
             </li>
           </ul>

@@ -20,6 +20,7 @@ const userCard = (props) => {
       <div class="row">
         <Domain domainURL={props.domainURL}></Domain>
       </div>
+      <Container heading="Tweets"></Container>
       <div class="row">
         <Tweet tweetsList={props.tweets}></Tweet>
       </div>
