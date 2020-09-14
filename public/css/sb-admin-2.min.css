@@ -9871,7 +9871,7 @@ a:focus {
   }
 }
 .bg-login-image {
-  background: url(https://source.unsplash.com/K4mSJ7kc0As/600x800);
+  background: url("../vendor/svg/22.svg");
   background-position: center;
   background-size: cover;
 }
