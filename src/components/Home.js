@@ -53,31 +53,6 @@ export default function Home(props) {
             : props.location.state.user.tweet.tweets
         }
       ></UserCard>
-
-      {/* 
-
-      {props.location.state.user.tweet.tweets.map((data) => {
-        return (
-          <div key={data._id} className="row">
-            <div className="col-lg-12">
-              <div className="card shadow mb-4">
-                <div className="card-header py-3">
-                  <span className="m-0 font-weight-bold text-primary mr-4">
-                    {data.whoTweeted}
-                  </span>
-                  <span className="m-0 font-weight-bold text-primary mr-4">
-                    #{data.hashTags}
-                  </span>
-                  <span className="m-0 font-weight-bold text-primary">
-                    {data.urls}
-                  </span>
-                </div>
-                <div className="card-body">{data.tweets}</div>
-              </div>
-            </div>
-          </div>
-        );
-      })} */}
     </div>
   );
 }
